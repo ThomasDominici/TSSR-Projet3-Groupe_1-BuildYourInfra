@@ -28,11 +28,11 @@ Imaginer le réseau qui fonctionnera avec l'ensemble des collaborateurs et maté
     - Créer un réseau stable et géré en interne
     - Prévoir l'évolution des effectifs
     - Prévoir les accès en fonction de services et des autorisations
-    - 
+      
 2. Fournir un plan d'adressage IP cohérent
     - Créer un plan d'adressage prenant en compte les évolutions prochaines de l'entreprise
     - Anticiper une évolution à plus long terme
-    - 
+      
 
 3. Fournir un plan schématique du futur réseau
 
