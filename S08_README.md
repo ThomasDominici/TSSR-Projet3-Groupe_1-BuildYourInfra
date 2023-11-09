@@ -3,7 +3,7 @@ Version 1.0
 
 
 ## Présentation du projet:
-L'objectif du projet est de réaliser un réseau dans une entreprise qui fonctionne actuellemnt sur une box FAI.
+L'objectif du projet est de réaliser un réseau dans une entreprise qui fonctionne actuellement sur une box FAI.
 Il faut d'ores et déjà prendre en commpte l'évolution prochaine des effectifs suite à la fututre fusion/acquisition.
 
 ## Les membres du groupe,
