@@ -12,7 +12,7 @@ Il faut d'ores et déjà prendre en commpte l'évolution prochaine des effectifs
 | :---: | :---: | --- |
 |Thomas | Agent actif | Création du support CANVA, Brain storming, Création du dépot GitHub |
 |Vincent | SM | Préparation des Dailys, Brain storming, Projet GNS3|
-|Fabrice | PO | Rédaction du Readme, brain storming,  |
+|Fabrice | PO | Rédaction du Readme, brain storming  |
 
 ## les difficultés:
 Imaginer le réseau qui fonctionnera avec l'ensemble des collaborateurs et matériels. 
