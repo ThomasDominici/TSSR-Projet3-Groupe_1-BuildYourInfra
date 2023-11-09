@@ -22,7 +22,7 @@ Imaginer le réseau qui fonctionnera avec l'ensemble des collaborateurs et maté
 	a. Une évolution des services
     - Prochaine fusion acquisition augmentant les effectifs de 50%
     - Réorganisations possibles
-    - Création ou suppression de services
+    - Création ou suppression de services (DHCP, DNS...)
       
 	b. Une évolution du réseau
     - Créer un réseau stable et géré en interne
