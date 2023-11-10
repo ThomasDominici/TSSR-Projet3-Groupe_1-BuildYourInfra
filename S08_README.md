@@ -14,7 +14,7 @@ Il faut d'ores et déjà prendre en commpte l'évolution prochaine des effectifs
 |Vincent | SM | Préparation des Dailys, Brain storming, Projet GNS3|
 |Fabrice | PO | Rédaction du Readme, brain storming  |
 
-## les difficultés:
+## Les difficultés:
 Imaginer le réseau qui fonctionnera avec l'ensemble des collaborateurs et matériels. 
 
 # Objectifs - S8
