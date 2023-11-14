@@ -27,6 +27,7 @@ Une fois l'installation terminée :
 -   Sur Ekoloclast.lan ==> clic droit ==> new ==> Organizationnal Unit
 -   Nommer "Paris" 
 -   Décocher **Protect container from accidental deletion**
+-   Créer l'OU.
 
 
 ### Création d'un groupe : 
