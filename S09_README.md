@@ -17,7 +17,8 @@ Il faut d'ores et déjà prendre en compte l'évolution prochaine des effectifs 
 
 ## Les difficultés:
 Comprendre le fonctionnement de l'outil Active Directory (AD) afin de réaliser une arborescence et un script automatique pour intégrer les employés dans les groupes qui leur correspond.
-Dicerner la différence entre Unités Organisationnelles (OU) et groupes afin de créer une arborescence fonctionnelle et facile à gérer au niveau des stratégies et des autorisations.
+Discerner la différence entre Unités Organisationnelles (OU) et groupes afin de créer une arborescence fonctionnelle et facile à gérer au niveau des stratégies et des autorisations.
+Réalisation d'un script PowerShell et découverte des commandes Active Directory.  
 
 ## Objectifs - S8
 1. Installer AD dans un Windows Server.
