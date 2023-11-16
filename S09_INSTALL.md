@@ -41,7 +41,9 @@ Une fois l'installation terminée :
 -   Sélectionner le type de groupe **Security**.
 -   Créer le groupe.
 
-## Pour récupérer les fichiers sur le Google Drive via internet : 
+## Connecter la VM à internet : 
+
+Pour récupérer les fichiers sur le Google Drive via internet :   
 
 Nous allons configurer l'adresse IP en 192.168.1.3/24.  
 La passerelle sera : 192.168.1.252  
