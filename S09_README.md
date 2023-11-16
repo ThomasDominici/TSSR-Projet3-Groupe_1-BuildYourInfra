@@ -23,8 +23,8 @@ Réflexion sur l'arborescence d'OU sur le Domaine AD
 Comprendre le fonctionnement de l'outil Active Directory (AD) afin de réaliser une arborescence et un script automatique pour intégrer les employés dans les Organization Unit qui leur correspond.      
 Discerner la différence entre Unités Organisationnelles (OU) et groupes afin de créer une arborescence fonctionnelle et facile à gérer au niveau des stratégies et des autorisations.      
 Réalisation d'un script PowerShell et découverte des commandes Active Directory.       
-Modification d'un export CSV afin de retirer les différents caractère spéciaux pour créer des utilisateurs.      
-Connection du serveur au réseaux internet pour recuperer les différentes ressources crées en local.      
+Modification d'un export CSV afin de retirer les différents caractères spéciaux pour créer des utilisateurs.      
+Connection du serveur à internet pour recupérer les différentes ressources créées en local.      
 Création d'un script pour automatiser l'arborescence des OU en cours de test finaux.       
 
 ## Objectifs - S9 :
