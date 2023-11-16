@@ -20,10 +20,20 @@ Pour notre arborescence, nous aurons donc des OU pour les départements et les s
 
 Notre arborescence sera donc représentée comme ceci : 
 
-**IMAGE**
-
-
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/arborescence.png)
 
 
 
 ## Explication de l'utilisation du script
+
+Notre script utilise le fichier transmis par le service RH avec les informations nécessaires sur les salariés.
+Nous reprenons donc l'affectation de chaque salairé afin de l'ajouter dans l'AD créé.
+Afin d'éviter les erreurs dues aux accents et aux caractères spéciaux nous avons une fonction qui les remplacent.
+
+Notre script crée les utilisateurs avec un mot de passe par défaut qui devra être remplacé à la première connexion.
+Une vérification est également faite de l'éxistance du salarié et renvoie un message afin de ne pas générer de doublon dans ce cas.
+Une fois l'opération validée un message de confirmation de la création s'affiche.
+
+
+
+
