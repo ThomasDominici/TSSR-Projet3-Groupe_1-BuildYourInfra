@@ -25,6 +25,13 @@ Cette semaine nous avions pour objectif de :
 ### Tâches Communes : 
 Réflexion sur la conception des scripts
 Finalisation des configuration PassBolt et AD 
+Configuration des IP des differente machine en concordance avec le réseaux Proxmox : 
+| Machine | IP |
+|  :---: | :---: |
+| Serveur AD DC | 192.168.10.5|
+| Serveur AD2  | 192.168.10.10 |
+| Serveur PassBolt | 192.168.10.15 |
+| Client Ubuntu  | 192.168.10.20 |
 
 ## Les Difficultés :
 .
