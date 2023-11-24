@@ -62,4 +62,27 @@ Cela va nous amener à la page d'installation de Passbolt.
 ![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/ImagesInstallPassbolt/passbolt7.JPG?raw=true)  
 
 
-  
+
+#
+
+## Nous avons installé notre SERVERCORE
+
+Nous allons maintenant intégrer notre SERVERCORE dans l'AD 
+
+#### Les prérequis sont :
+
+- Une adresse IP fixe.
+- Configurer un contrôleur de domaine existant en tant DNS sur le réseau.
+- S’assurer que le ping sur le nom de domaine à rejoindre fonctionne.
+
+#### Saisir la ligne de code suivante :
+Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+
+Patienter pendant l'installation de l'AD DS.
+
+#### Saisir cette nouvelle ligne de code :
+Install-ADDSDomainController -DomainName "ekoloclast.lab" -InstallDns:$true -Credential (Get-Credential "ekoloclast\administratror")
+
+Vous serrez invité à saisir le mot de passe du compte du domaine défini puis à confirmer l'opération.
+
+Enfin le serveur va redémarrer.
