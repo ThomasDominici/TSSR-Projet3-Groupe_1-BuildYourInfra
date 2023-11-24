@@ -51,7 +51,7 @@ La partie installation sur le serveur est terminée.
 
 ### Sur le client : 
 
-Nous pouvons désormais configurer le serveur Passbolt en interface graphique depuis un client ayant une addresse IP sur le même réseau que le serveur. Il faut que les deux machines pingent.`Ici, l'addresse IP de notre serveur est 192.168.1.15.
+Nous pouvons désormais configurer le serveur Passbolt en interface graphique depuis un client ayant une adresse IP sur le même réseau que le serveur. Il faut que les deux machines ping.`Ici, l'addresse IP de notre serveur est 192.168.1.15.
 Nous allons donc ouvrir une page internet et taper :
 ```
 http://192.168.1.15/
