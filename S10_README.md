@@ -37,3 +37,10 @@ Configuration des IP des differente machine en concordance avec le réseaux Prox
 Nous n'avons pas pu finir la configuration de Passbolt en raison d'un manque de permissions sur le proxmox.  
 Il a été difficile de fixer l'IP de notre serveur AD Core au début, mais nous avons par la suite réussi à le faire et à le rajouter sur notre domaine en tant que Domain Controller.
 Pour le script de création d'utilisateurs, il nous a fallu du temps pour réaliser un ajout de fonctionnalité de désactivation des utilisateurs ayant quitté l'entreprise. 
+
+## Next Step : 
+- Finalisation de la configuration de Passbolt
+- Modification du script d'ajout d'utilisateur
+    - Changement de la méthodologie pour selectionner les utilisateurs à désactiver
+    - Adapter le script pour accepter des arguments.
+    - Ajout des informations complémentaires, ajout manager.
