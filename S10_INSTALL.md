@@ -76,13 +76,16 @@ Nous allons maintenant intégrer notre SERVERCORE dans l'AD
 - S’assurer que le ping sur le nom de domaine à rejoindre fonctionne.
 
 #### Saisir la ligne de code suivante :
+```
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+```
 
 Patienter pendant l'installation de l'AD DS.
 
 #### Saisir cette nouvelle ligne de code :
+```
 Install-ADDSDomainController -DomainName "ekoloclast.lab" -InstallDns:$true -Credential (Get-Credential "ekoloclast\administratror")
-
+```
 Vous serrez invité à saisir le mot de passe du compte du domaine défini puis à confirmer l'opération.
 
 Enfin le serveur va redémarrer.
