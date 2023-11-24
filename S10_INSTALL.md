@@ -74,7 +74,7 @@ Nous allons maintenant intégrer notre SERVERCORE dans l'AD
 - Une adresse IP fixe.
 - Configurer un contrôleur de domaine existant en tant DNS sur le réseau.
 - S’assurer que le ping sur le nom de domaine à rejoindre fonctionne.
-- Le DFNS doit être l'adresse IP du serveur DC AD existant.  
+- Le DNS doit être l'adresse IP du serveur DC AD existant.  
 
 #### Saisir la ligne de code suivante :
 ```
