@@ -121,7 +121,7 @@ Une fois entrés dans le serveur en graphique, il nous est demandé de modifier 
 #### Ajout à l'AD : 
 
 Nous allons maintenant ajouter l'AD dans le GLPI.  
-Il nous faut créer un utilisateur servant à la synchronisation avec AD. Cet utilisateur doit être utilisateur du domaine et ne requiert aucun droit particulier (membre du groupe « utilisateurs du domaine »). Ici notre utilisateur s’appellera « glpi-ldap ».  
+Il nous faut créer un utilisateur servant à la synchronisation avec AD. Cet utilisateur doit être utilisateur du domaine et ne requiert aucun droit particulier (membre du groupe « utilisateurs du domaine »). Ici notre utilisateur s’appellera « glpi-ldap ».  Cet utilisateur fera partie du groupe **UtilisateursGLPI** et de l'OU **04GLPI**
 
 - Pour cela, nous allons sélectionner **Configuration** puis **Authentification** puis **Annuaire LDAP**.
 - Nous allons cliquer sur le petit "+" et créer un annuaire.
@@ -132,10 +132,10 @@ Il nous faut créer un utilisateur servant à la synchronisation avec AD. Cet ut
     **Actif**: Nous choisirons d’activer le connecteur via ce menu en choisissant « Oui ». 
     **Serveur**: Nous donnerons l’adresse IP de notre serveur, ici 192.168.10.5
     **Port**: Nous laisserons le port par défaut, le 389.
-    **Filtre de connexion**: Nous cliquons en haut sur Active Directory et cela va remplir ce champs automatiquement avec les valeurs suivantes : 
+    **Filtre de connexion**: Nous mettrons les valeurs suivantes qui spécifie le lieu où chercher nos utilisateurs.
 
 ```
-(&(objectClass=user)(objectCategory=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))
+(&(objectClass=user)(objectCategory=person)(memberOf=CN=UtilisateursGLPI,OU=04GLPI,DC=EKOLOCLAST,DC=LAN)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))
 ```
 
    **Base DN** : Nous indiquerons notre domaine active directory
@@ -166,19 +166,8 @@ Une fois le connecteur crée nous allons le tester en quiquant sur **tester**. S
 
   #### Connexion des utilisateurs :
 
-  Pour permettre aux utilisateurs de se connecter à GLPI :
-  Sur l'utilisateur : 
-  - Actions
-  - Changer la méthode d'authentification
-  - Authentification sur la base de données GLPI
-  - Envoyer
-  - On peut maintenant renseigner un mot de passe.
-
-  Il faut aussi renseigner le profil en self-service **récursif** :
-  - Actions
-  - Associer à un profil
-  - Self-service
-  - Cocher **Récursif**
-  - Ajouter
-
-  On se déconnecter du compte super-admin **glpi** et on peut maintenant se connecter avec notre utilisateur.
+  Sur un PC client :
+  - identifiant = prenom.nom
+  - mot de passe = password
+ 
+  On peut modifier le mot de passe à la connexion.
