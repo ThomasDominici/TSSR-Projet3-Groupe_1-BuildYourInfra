@@ -16,3 +16,13 @@ Si le manager approuve, le ticket est noté comme résolu. Une fois résolu, une
 C'est la fin du processus.  
 
 Ce système permet de centraliser les demandes de tous les utilisateurs sur une plateforme de help-desk unique. GLPI prend tout de même en compte les demandes extérieures avec un onglet où l'on peut choisir si la demande vient du help-desk ou d'un mail, téléphone, vis-à-vis etc...   
+
+
+## Script Création de Ordinateur
+
+### Prérequis
+Il vous faut le fichier en .CSV sur le bureau de votre serveur, avec le nom suivant : "**s11_SocieteEkoloclast.csv**"  
+
+### Utilisation 
+Vous pouvez lancer le script sans aucune condition autre que celle précisé dans les prérequis, celui ci va importer le CSV dans une variable.  
+Ensuite dans une boucle "**Foreach**", il va commencer par vérifié si l'ordinateur à créer fait bien parti de notre parc matériel, puis il vérifie si l'ordinateur existe déjà dans notre AD, enfin il va créer l'ordinateur et le placer dans l'OU auquel il doit correspondre ainsi que l'ajouter a son groupe.
