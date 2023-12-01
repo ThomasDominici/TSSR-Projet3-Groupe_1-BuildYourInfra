@@ -21,7 +21,7 @@ Ce système permet de centraliser les demandes de tous les utilisateurs sur une 
 ## Script Création de Ordinateur
 
 ### Prérequis
-Il vous faut le fichier en .CSV sur le bureau de votre serveur, avec le nom suivant : "**s11_SocieteEkoloclast.csv**"  et avoir deja lancer le Script "CréationOUProjet"
+Il vous faut le fichier en .CSV sur le bureau de votre serveur, avec le nom suivant : "**s11_SocieteEkoloclast.csv**" et avoir deja lancer le Script "CréationOUProjet"
 
 ### Utilisation 
 Vous pouvez lancer le script sans aucune condition autre que celle précisé dans les prérequis, celui ci va importer le CSV dans une variable.  
