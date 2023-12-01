@@ -167,7 +167,7 @@ Une fois le connecteur crée nous allons le tester en quiquant sur **tester**. S
   #### Connexion des utilisateurs :
 
   Sur un PC client :
-  - identifiant = prenom.nom
+  - identifiant = Prenom.Nom
   - mot de passe = password
  
   On peut modifier le mot de passe à la connexion.
