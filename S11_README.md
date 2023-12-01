@@ -21,7 +21,7 @@ Cette semaine nous avions pour objectif de :
 - Modification fichier RH  
 	1. Avec Prestataire
 	2. Avec N° de PC
-	3. Case vide remplacées par "-"
+	3. Cases vides remplacées par "-"
 
 - Intégration des PC du fichier dans l'AD  
 
