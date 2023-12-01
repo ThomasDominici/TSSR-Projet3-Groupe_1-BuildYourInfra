@@ -50,6 +50,8 @@ Modifications des différents scripts pour répondre aux attentes
 Les modifications du script pour répondre aux besoins de la semaine ont pris du temps.  
 La configuration de GLPI, son installation sur un serveur Debian au lieu d'un serveur Ubuntu et les modifications que cela a entraîné ont causé un retard.
 L'ajout des utilisateurs de l'AD dans GLPI a été difficile et nous n'avons pas pour l'instant trouver comment configurer les utilisateurs tout d'un coup pour leur permettre de se connecter. Nous pouvons les configurer un par un ce qui prend beaucoup de temps.
+Difficultés dans la création et la modification du code, notamment l'ajout des managers.
+Problème avec une destruction de notre serveur AD principal, nous avons perdu du temps a vouloir la réparer et remonter un serveur à côté pour pouvoir poursuivre le projet.
 
 ## Next Step : 
 - Finalisation de la configuration de GLPI
