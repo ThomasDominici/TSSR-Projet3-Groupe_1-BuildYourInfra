@@ -60,4 +60,4 @@ Problème avec une destruction de notre serveur AD principal, nous avons perdu d
     - Adapter le script pour accepter des arguments.
     - Ajout des informations complémentaires, ajout manager.
 - Mieux maîtriser les GPO pour continuer le projet sur de bonnes bases.
-- Mieux comprendr les configurations de GLPI pour la connexion utilisateurs.
+- Mieux comprendre les configurations de GLPI pour la connexion utilisateurs.
