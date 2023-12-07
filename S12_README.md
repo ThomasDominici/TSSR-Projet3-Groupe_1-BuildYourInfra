@@ -11,20 +11,23 @@ Il faut d'ores et déjà prendre en compte l'évolution prochaine des effectifs 
 ## Objectif de la semaine S10  
 Cette semaine nous avions pour objectif de :   
 
+- Finaliser les GPO de sécurité
+- Créer un script de télémétrie et l'appliquer par GPO
+- Configurer notre pare-feu pfSense
+- Adapter notre script aux changements du fichier RH
 
 
 ## Les membres du groupe :
 
 |Nom|Rôle|Travaux effectués|
 | :---: | :---: | --- |
-|Thomas | SM | Installation du serveur GLPI et configuration des utilisateurs et ticketing |
-|Vincent | PO | Script modification du fichier RH |
-|Fabrice | Agent actif |Script modification du fichier RH |
+|Thomas | PO | Création du script télémétrie et GPO associée, pfSense |
+|Vincent | Agent actif | Création des GPO de sécurité AD, pfSense |
+|Fabrice | SM | pfSense |
 
 
 ### Tâches Communes : 
-Réflexion sur la conception des GPO
-Avancée de la configuration de GLPI
+Réflexion sur la conception de pfSense
 Modifications des différents scripts pour répondre aux attentes
 | Machine | IP |
 |  :---: | :---: |
@@ -36,5 +39,8 @@ Modifications des différents scripts pour répondre aux attentes
 
 ## Les Difficultés :
 
+Trouver les bonnes informations sur les règles de pare-feu majoritairement. Cela a été la plus grosse difficulté de la semaine. Test des GPO.
 
 ## Next Step : 
+
+Avancer sur l'ajout des PC sur GLPI (rattraper le retard sur ce point)
