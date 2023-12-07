@@ -1,6 +1,6 @@
 # Guide d'installation semaine 12 : 
 
-## 1. GPO : Création Types d'un GPO
+## 1. GPO : Création type d'un GPO
 
 ### Création
 Pour respecter les bonnes pratiques, nous allons crée la GPO dans le dossier "**Group Policy Object**", et nous allons la nommé avec la nomenclature suivant "**UsersXXX**" si l'on veut appliqué la GPO sur les utilisateurs et "**ComputerXXX**" si la GPO sera appliqué sur les Ordinateurs, "**XXX**" correspond à un nom explicite sur la fonction de la GPO pour exemple dans cette Install nous créons la GPO "**UsersVerrouillageSession**".
@@ -99,3 +99,23 @@ Dans notre cas 1.
 On obtiens donc ceci :
 
 ![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/TutoGPO/104.png?raw=true)
+
+
+## 3. Création de la GPO télémétrie avec le script correspondant :
+
+Nous avons rédigé le script suivant :    
+      
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/imgscriptTelemetry.JPG?raw=true)
+
+Nous allons placer ce script dans le dossier SYSVOL avec le chemin suivant : 
+
+```
+\\win2022\SYSVOL\ekoloclast.lan\scripts\GPO-Script-Telemetry
+```
+
+Nous allons ensuite créer la GPO **COMPUTERTelemetry** en l'appliquant au groupe **GRPUtilisateurs** et à l'OU **02Ordinateurs**.
+Dans edit => Computer configuration => Policies => Windows Settings => Scripts => Startup.
+
+On rajoute le chemin de notre script dans l'onglet **Script Powershell** et on applique. 
+En redémarrant le client, on voit bien dans les clés de registre que la télémétrie a été désactivée.
+
