@@ -113,7 +113,7 @@ Nous allons placer ce script dans le dossier SYSVOL avec le chemin suivant :
 \\win2022\SYSVOL\ekoloclast.lan\scripts\GPO-Script-Telemetry
 ```
 
-Nous allons ensuite créer la GPO **COMPUTERTelemetry** en l'appliquant au groupe **GRPUtilisateurs** et à l'OU **02Ordinateurs**.
+Nous allons ensuite créer la GPO **COMPUTERTelemetry** en l'appliquant au groupe **GRPOrdinateurs** et à l'OU **02Ordinateurs**.
 Dans edit => Computer configuration => Policies => Windows Settings => Scripts => Startup.
 
 On rajoute le chemin de notre script dans l'onglet **Script Powershell** et on applique. 
