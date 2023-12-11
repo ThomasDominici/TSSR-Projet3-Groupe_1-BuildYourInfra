@@ -79,8 +79,8 @@ sudo mkdir /var/www/html/glpi.ekoloclast.lan
 sudo tar -xzvf glpi-10.0.2.tgz
 sudo cp -R glpi/* /var/www/html/glpi.ekoloclast.lan/
 
-sudo chown -R www-data:www-data /var/www/html/ekoloclast.lan/
-sudo chmod -R 775 /var/www/html/glpi.monNomDeDomaine/
+sudo chown -R www-data:www-data /var/www/html/glpi.ekoloclast.lan/
+sudo chmod -R 775 /var/www/html/glpi.ekoloclast.lan/
 ```
 
 #### Configuration de PHP :
