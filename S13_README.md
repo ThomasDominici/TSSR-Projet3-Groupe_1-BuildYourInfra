@@ -11,7 +11,8 @@ Il faut d'ores et déjà prendre en compte l'évolution prochaine des effectifs 
 Cette semaine nous avions pour objectif de :   
 
 - Créer des dossier partagés individuels pour les employés (mappage I)
-- Créer des dossiers partagés par département/service (mappage M)
+- Créer des dossiers partagés par service (mappage M)
+- Créer des dossiers partagés par département (mappage N)
 - Mettre en place un RAID 1 sur le volume système de l'AD de Paris
 - Mettre en place une sauvegarde du volume contenant les deossiers partagés dans un autre volume spécifique avec au minimum une sauvegarde par semaine.
 - Créer une restriction horaire d'utilisation des machines entre 8h et 18h du lundi au vendredi
