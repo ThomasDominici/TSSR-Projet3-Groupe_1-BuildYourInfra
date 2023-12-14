@@ -1,3 +1,39 @@
+
+# Création d'une sauvegarde du volume qui contient les dossiers partagés des utilisateurs.
+
+Il faut s'assurer d'avoir un disque disponible qui sera dédié aux sauvegardes.
+
+## Installation de Windows Server Backup
+
+Dans le Server Manager sélectionner la coche "Windows Server Backup" et lancer l'installation en conservant les paramètres par défaut.
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/sauvegarde/01_installaion_backup.png?raw=true)
+
+Lorsque l'installation est terminée on obtient cette fenêtre :
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/sauvegarde/02_install_backup_terminee.png?raw=true)
+
+## Configuration de Windows Server Backup
+
+Nous choisissons l'option "Custom" 
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/sauvegarde/03_config_winsvr_backup.png?raw=true)
+
+Choix du disque à sauvegarder qui est notre volume partagé "E"
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/sauvegarde/04_config_winsvr_backup.png?raw=true)
+
+Choix de l'heure et du nombre de sauvegardes, nous en sélectionnons une hebdomadaire à 21h00 afin de limiter les sollicitations du système dans la journée.
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/sauvegarde/05_config_winsvr_backup.png?raw=true)
+
+Choix des options destination : Notre sauvegarde ira sur le disque "F" que nous trouvons en cliquant sur "Show All Available Disks".
+Sur la fenêtre suivante il reste à choisir le disque et valider.
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/sauvegarde/06_config_winsvr_backup.png?raw=true)
+
+Valider et attendre la fin de la configuration, cette fenêtre s'affiche.
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/sauvegarde/07_config_winsvr_backup.png?raw=true)
+
+Nous pouvons vérifier les paramètres dans cette dernière fenêtre.
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/sauvegarde/08_config_winsvr_backup.png?raw=true)
+
+
+
 # RAID1 sur Windows Server
 
 Pour cela vous allez avoir besoin de rajouter un disque dans votre VM, sa capacité doit au moins être équivalente à celle du disque qui sera dupliqué grâce au RAID1.
