@@ -39,7 +39,7 @@ Création des différentes GPO pour répondre aux objectifs
 | Serveur GLPI  | 192.168.10.11 |
 
 ## Les Difficultés :
-Travail répétitif pour la création des odssiers partagés entre les services. Aucune avancée sur GLPI pour rattraper le retard malgré une journée supplémentaire de recherche.
+Travail répétitif pour la création des dossiers partagés entre les services. Aucune avancée sur GLPI pour rattraper le retard malgré une journée supplémentaire de recherche.
 
 ## Next Step : 
 
