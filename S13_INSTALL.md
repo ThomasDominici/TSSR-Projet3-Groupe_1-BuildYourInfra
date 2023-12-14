@@ -171,3 +171,148 @@ Le chemin d'édition de cette GPO est le suivant :
 
 
 La GPO a bien été montée et s'applique à l'ensemble des ordinateurs du domaine.
+# Dossier Partagé déployé par GPO
+## Prérequis matériel
+Pour commencer nous allons ajouter, un nouveau disque sur notre serveur, qui nous servira de stockage pour tout les dossiers partagés des utilisateurs, services, et départements. on utilisera le format GPT, et allouons tout l'espace disponible dans un seul volume E:\\
+
+## Création et mise en réseaux de la Racine de notre partage utilisateurs
+
+Dans celui-ci, nous allons créer un dossier utilisateurs qui nous servira à stocker et partager tout les dossiers personnel de nos utilisateurs.
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/CreationMiseenPartageduDossier/Capture%20d'%C3%A9cran%202023-12-14%20145505.png?raw=true)
+
+Nous faisons un clic droit > Propriétés sur le dossier sur le lecteur E:\\ .
+Dans l'onglet Partage, nous allons partager le dossier sur le réseaux.
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/CreationMiseenPartageduDossier/Capture%20d'%C3%A9cran%202023-12-14%20153233.png?raw=true)
+
+Nous allons ajouter le groupe "**Authentificated Users**" aux personnes pouvant accéder au dossier et nous leur donnons les droits de lecture/écriture.
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/CreationMiseenPartageduDossier/Capture%20d'%C3%A9cran%202023-12-14%20145712.png?raw=true)
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/CreationMiseenPartageduDossier/Capture%20d'%C3%A9cran%202023-12-14%20145741.png?raw=true)
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/CreationMiseenPartageduDossier/Capture%20d'%C3%A9cran%202023-12-14%20145815.png?raw=true)
+
+Nous faisons un clic droit > Propriétés sur le dossier partagé sur le réseaux dans \\\\\<NomdevotreServeur>.
+Dans l'onglet Sécurité, cliqué sur Avancé.
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/CreationMiseenPartageduDossier/Capture%20d'%C3%A9cran%202023-12-14%20150053.png?raw=true)
+
+On commence par désactiver l'héritage. 
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/CreationMiseenPartageduDossier/Capture%20d'%C3%A9cran%202023-12-14%20150310.png?raw=true)
+
+Puis on va ajouter dans les permissions le groupe "**CREATOR OWNER**"
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/CreationMiseenPartageduDossier/Capture%20d'%C3%A9cran%202023-12-14%20150550.png?raw=true)
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/CreationMiseenPartageduDossier/Capture%20d'%C3%A9cran%202023-12-14%20150604.png?raw=true)
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/CreationMiseenPartageduDossier/Capture%20d'%C3%A9cran%202023-12-14%20150633.png?raw=true)
+
+
+Enfin on lui donne le "**Full Control**" sur le dossier
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/CreationMiseenPartageduDossier/Capture%20d'%C3%A9cran%202023-12-14%20150657.png?raw=true)
+
+
+
+## Création et configuration de la GPO
+Nous allons reprendre la création de GPO depuis le début.
+Clic droit sur "**Group Policy Object**" > "**New**"
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/GPO/Capture%20d'%C3%A9cran%202023-12-14%20150747.png?raw=true)
+
+Nous allons l'appeler "**UserDossierPerso**" 
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/GPO/Capture%20d'%C3%A9cran%202023-12-14%20150836.png?raw=true)
+
+Nous allons utiliser les groupes de filtrage suivant pour appliqué notre GPO :
+- "**Domain Computer**" : Obligatoire lors d'une GPO affectant les utilisateurs.
+- "**GRPUtilisateurs**" : Notre groupe reprenant tout les utilisateurs de notre AD.
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/GPO/Capture%20d'%C3%A9cran%202023-12-14%20151004.png?raw=true)
+
+Comme cette GPO s'appliquera sur les utilisateurs, on désactive les configuration ordinateurs.
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/GPO/Capture%20d'%C3%A9cran%202023-12-14%20151046.png?raw=true)
+
+Nous allons configurer 3 règles dans cette GPO :
+- "**Folder**" : qui nous permet de crée automatiquement un dossier n'appartenant qu'a l'utilisateurs de la session en cours sur la machine client
+- "**Drivers Maps**" : qui va automatiquement mapper le dossier crée en tant que lecteur M:\
+- "**Shortcut**" : qui va créer un raccourci sur le bureau de l'utilisateurs pour accéder plus rapidement à son dossier personnel 
+### Règle Folder
+
+Pour nous rendre a cette règle suivez le chemin suivant : 
+- "**User Configuration**" > "**Preferences**" > "**Windows Settings**" > "**Folders**"
+
+Faites un clic droit sur la fenêtre et sélectionner New > Folders
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/GPO/Capture%20d'%C3%A9cran%202023-12-14%20151313.png?raw=true)
+
+Dans l'option "**Path**" nous renseignons le chemin suivant :
+- \\\\\<NomdevotreServeur>\utilisateurs\\%LogonUser%
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/GPO/Capture%20d'%C3%A9cran%202023-12-14%20151411.png?raw=true)
+
+La variable "**%LogonUser%**" permet de créer un dossier qui aura automatiquement le nom de notre utilisateurs connecté.
+
+On se rend ensuite dans l'onglet "**Common**" et on coche la cas "**Run in logged-on ...**"
+
+On valide la règle et passons à la suivante : "**Drive Maps**"
+
+### Drive Maps
+
+Pour nous rendre a cette règle suivez le chemin suivant : 
+- "**User Configuration**" > "**Preferences**" > "**Windows Settings**" > "**Drive Maps**"
+
+Faites un clic droit sur la fenêtre et sélectionner "**New**" > "**Mapped Drive**"
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/GPO/Capture%20d'%C3%A9cran%202023-12-14%20151501.png?raw=true)
+
+Dans l'option "**Location**", nous renseignons le chemin que nous avons utilisé lors de la création automatique du dossier grâce à la variable "**%LogonUser%**".
+
+Dans l'option "**Label as**", on renseigne le nom que le lecteur aura dans notre cas "**Dossier Perso**".
+
+Dans l'option "**Driver Letter**", dans notre cas :
+- pour les utilisateurs on utilisera le lecteur "**I:\\**"
+- pour les services on utilisera le lecteur "**M:\\**"
+- pour les départements on utilisera le lecteur "**N:\\**"
+
+Ensuite on utilisera les options "**Show this drive**" et "**Show all drive**" pour afficher les lecteurs.
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/GPO/Capture%20d'%C3%A9cran%202023-12-14%20151528.png?raw=true)
+
+Enfin comme pour la règle des "**Folders**", on va dans l'onglet Common et on active "**Run in logged-on ...**"
+
+### Shortcut
+
+Pour nous rendre a cette règle suivez le chemin suivant : 
+- "**User Configuration**" > "**Preferences**" > "**Windows Settings**" > "**Shortcut**"
+
+Faites un clic droit sur la fenêtre et sélectionner "**New**" > "**Shortcut**"
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/GPO/Capture%20d'%C3%A9cran%202023-12-14%20151550.png?raw=true)
+
+Dans l'option "**Name**", on renseigne le nom du raccourcie "**ESPACE PERSO**".
+
+Dans l'option "**Target Path**", nous renseignons le chemin que nous avons utilisé lors de la création automatique du dossier grâce à la variable "**%LogonUser%**".
+
+Dans l'option "**Icon File Path**", on peut modifier l'icône du raccourcie grâce a la bibliothèque disponible dans les "**...**"
+
+Ensuite on utilisera les options "**Show this drive**" et "**Show all drive**" pour afficher les lecteurs.
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/GPO/Capture%20d'%C3%A9cran%202023-12-14%20151603.png?raw=true)
+### Application de la GPO 
+
+Pour terminer, on applique notre GPO sur l'OU "**01Utilisateurs**"
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/GPO/Capture%20d'%C3%A9cran%202023-12-14%20152224.png?raw=true)
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/GPO/Capture%20d'%C3%A9cran%202023-12-14%20152242.png?raw=true)
+
+Notre GPO est terminé et elle est appliqué correctement 
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GitHubDossierPartage/GPO/Capture%20d'%C3%A9cran%202023-12-14%20152254.png?raw=true)
+## Divers
+On applique la même méthodologie pour les département et services on modifie juste les chemins d'accès au différent dossier correspondant au différent département ou services
