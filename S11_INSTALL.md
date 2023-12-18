@@ -75,12 +75,12 @@ wget https://github.com/glpi-project/glpi/releases/download/10.0.2/glpi-10.0.2.t
 Puis on tape les commandes ci-après : 
 
 ```Bash
-sudo mkdir /var/www/html/glpi.ekoloclast.lan
-sudo tar -xzvf glpi-10.0.2.tgz
-sudo cp -R glpi/* /var/www/html/glpi.ekoloclast.lan/
+mkdir /var/www/html/glpi.ekoloclast.lan
+tar -xzvf glpi-10.0.2.tgz
+cp -R glpi/* /var/www/html/glpi.ekoloclast.lan/
 
-sudo chown -R www-data:www-data /var/www/html/glpi.ekoloclast.lan/
-sudo chmod -R 775 /var/www/html/glpi.ekoloclast.lan/
+chown -R www-data:www-data /var/www/html/glpi.ekoloclast.lan/
+chmod -R 775 /var/www/html/glpi.ekoloclast.lan/
 ```
 
 #### Configuration de PHP :
