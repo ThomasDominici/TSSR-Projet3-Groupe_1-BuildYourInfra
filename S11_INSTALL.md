@@ -33,6 +33,24 @@ Installation de la base de donnée. Ici nous installons MariaDB :
 apt-get install mariadb-server -y
 ```
 
+#### Installation de PHP : 
+
+Installation des dépendances : 
+```Bash
+apt-get install ca-certificates apt-transport-https software-properties-common wget curl lsb-release
+```
+
+Ajout du dépôt pour PHP 8.1 : 
+```Bash
+curl -sSL https://packages.sury.org/php/README.txt | bash -x
+apt-get update
+```
+
+Installation de PHP 8.1 : 
+```Bash
+apt-get install php8.1
+```
+
 Installation des modules annexes :
 ```Bash
 apt-get install php8.1 libapache2-mod-php -y
