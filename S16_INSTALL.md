@@ -5,6 +5,8 @@
 ### Installation de WSUS : 
 
 Sur une serveur Windows 2022 : 
+Tout d'abord, ajouter le PC au domaine.  
+
 - Ajouter des rôles et fonctionnalités
 - Sélectionner "Windows Server Update Services"
 - Inclure tous les outils de gestion
