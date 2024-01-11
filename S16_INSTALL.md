@@ -57,7 +57,7 @@ Nous allons créer des GPO, une pour les paramètres en commun de nos ordianteur
 Il s'agira de GPO Ordinateurs filtrées avec le groupe GrpOrdinateurs rassemblant toutes les machines et reliées aux OU correspondantes.
 
 
-##### GPO WSUS pour les paramètres communs :
+#### GPO WSUS pour les paramètres communs :
 
 Editer la GPO : 
 - Configuration ordinateur
@@ -77,7 +77,7 @@ Le second paramètre se nomme "Configuration du service Mises à jour automatiqu
 Le troisième paramètre est "Ne pas se connecter à des emplacements Internet Windows Update"
 -Activer
 
-##### GPO WSUS pour les paramètres des clients : 
+#### GPO WSUS pour les paramètres des clients : 
 
 Editer la GPO : 
 - Configuration ordinateur
@@ -96,7 +96,7 @@ Second paramètre : "Désactiver le redémarrage automatique pour les mises à j
 
 
 
-##### GPO WSUS pour les paramètres des serveurs : 
+#### GPO WSUS pour les paramètres des serveurs : 
 
 Editer la GPO : 
 - Configuration ordinateur
@@ -115,7 +115,7 @@ Second paramètre : "Désactiver le redémarrage automatique pour les mises à j
 
 
 
-##### GPO WSUS pour les paramètres des DC : 
+#### GPO WSUS pour les paramètres des DC : 
 
 Editer la GPO : 
 - Configuration ordinateur
