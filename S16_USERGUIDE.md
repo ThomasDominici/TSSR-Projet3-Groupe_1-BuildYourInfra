@@ -1,6 +1,6 @@
 # Guide d'utilisation : 
 
-## WSUS : 
+# Guide d'Utilisation de WSUS : 
 
 Une fois WSUS configuré, on peut traiter les mises à jour. On regarde les MAJ sous le status **Failed or Needed** pour voir les MAJ nécessaires à nos ordinateurs.   
 
