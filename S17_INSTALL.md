@@ -1,4 +1,25 @@
-# Guide d'installation des deux serveurs ADCORE : 
+# Guide d'installation des deux serveurs ADCORE :
+
+## Configuration EFI et mise en place du RAID 1 : 
+
+Dans virtualbox, avant le démarrage de la nouvelle machine, cocher dasn **Système** la case **EFI**. Cela permettra de créer le disk 0 au format GPT et non MBR.  
+
+Ajouter un second disque.
+
+Une fois la machine allumée, on tape 15 pour aller sur l'invite de commande :
+- list disk
+- select disk 0
+- convert dynamic
+- select disk 1
+- convert gpt
+- convert dynamic
+- select volume 0
+- add disk=1
+
+Le disque 0 est maintenant en mirroring avec le disque 1.
+
+
+## Installation : 
 
 Pour l'installation de ces serveurs, on utilise le script suivant : 
 
