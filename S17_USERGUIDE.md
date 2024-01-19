@@ -16,14 +16,14 @@ Nous allons utiliser l'outil **NTDSUTIL** :
 - Taper **connections**
 - Pour se connecter au serveur voulu, taper **connect to server ADCORE1** (exemple pour notre cas)
 - Retourner au mode fsmo maintenance, taper **q**
-- Les transferts :
-      - Transfert du rôle **Maître RID** : *transfer RID master*
-      - Transfert du rôle **PDC** : *transfer pdc*
+- Les transferts :  
+      - Transfert du rôle **Maître RID** : *transfer RID master*  
+      - Transfert du rôle **PDC** : *transfer pdc*  
 - Retourner en mode **connections**
 - Taper **connect to server ADCORE2**
 - Sortir en maintenance FSMO avec **q**
-- Les transferts :
-      - Transfert du rôle **Maître d'infrastructure** : *transfer infrastructure master*
+- Les transferts :  
+      - Transfert du rôle **Maître d'infrastructure** : *transfer infrastructure master*  
 
 
 Pour vérifier que les rôles ont bien été répartis, aller sur le panneau **cmd** et taper : 
