@@ -28,7 +28,7 @@ Nous allons utiliser l'outil **NTDSUTIL** :
 
 Pour vérifier que les rôles ont bien été répartis, aller sur le panneau **cmd** et taper : 
 ```
-NETDOME QUERY /Domain:ekoloclast.lan FSMO
+NETDOM QUERY /Domain:ekoloclast.lan FSMO
 ```
 
 Vous obtiendrez le résultat suivant :
