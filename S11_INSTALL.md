@@ -143,6 +143,7 @@ Il nous faut créer un utilisateur servant à la synchronisation avec AD. Cet ut
 
 - Pour cela, nous allons sélectionner **Configuration** puis **Authentification** puis **Annuaire LDAP**.
 - Nous allons cliquer sur le petit "+" et créer un annuaire.
+- On clique sur **Active Directory** pour un remplissage automatique du filtre de connexion.  
 - Nous configurerons le connecteur comme cela:
 
     **Nom**: nous donnerons ici un nom au connecteur. Nous ferons le choix de donner le nom de notre serveur Active Directory
