@@ -7,6 +7,7 @@ Dans virtualbox, avant le démarrage de la nouvelle machine, cocher dasn **Syst�
 Ajouter un second disque.
 
 Une fois la machine allumée, on tape 15 pour aller sur l'invite de commande :
+- diskpart
 - list disk
 - select disk 0
 - convert dynamic
