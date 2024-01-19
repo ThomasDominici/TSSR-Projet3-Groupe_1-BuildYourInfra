@@ -10,7 +10,7 @@ Nous allons déplacer le rôle **Maître d'infrastructure** sur ADCORE2 car dans
 Sur le serveur AD graphique.  
 Nous allons utiliser l'outil **NTDSUTIL** :   
 - Dans la barre windows, taper **run** puis rentrer **ntdsutil.exe**
-- Une page de en lignes de commandes apparaît
+- Une page en lignes de commandes apparaît
 - Pour avoir de l'aide, taper **?**
 - Pour passer en fsmo maintenance, taper **role**
 - Taper **connections**
