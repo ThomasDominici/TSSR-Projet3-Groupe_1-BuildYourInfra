@@ -5,9 +5,9 @@
 Une fois les serveurs ADCORE installées en DC sur le domaine, on va répartir les rôles FSMO.   
 Nous allons laisser les rôles **Maître de schéma** et **Maître d'affectation** sur le DC principal graphique car ces deux rôles ont un impact sur l'ensemble de la forêt et pas seulement le domaine.  
 Nous allons transfére les rôles **PDC** et **RID Master** sur le serveur ADCORE1 car ils agissent sur le domaine et peuvent être déplacés sur un DC secondaire du domaine.  
-Nous allons déplacer le rôle **Maître d'infrastructure** sur ADCORE2 car dnas notre cas, n'ayant qu'un seul domaine, il n'a pas de rôle réel à jouer.  
+Nous allons déplacer le rôle **Maître d'infrastructure** sur ADCORE2 car dans notre cas, n'ayant qu'un seul domaine, il n'a pas de rôle réel à jouer.  
 
-
+Sur le serveur AD graphique.  
 Nous allons utiliser l'outil **NTDSUTIL** :   
 - Dans la barre windows, taper **run** puis rentrer **ntdsutil.exe**
 - Une page de en lignes de commandes apparaît
