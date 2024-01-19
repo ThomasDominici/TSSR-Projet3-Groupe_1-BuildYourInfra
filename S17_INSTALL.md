@@ -22,6 +22,7 @@ Le disque 0 est maintenant en mirroring avec le disque 1.
 
 ## Installation : 
 
+On configure tout d'abord le DNS dans le menu (8).    
 Pour l'installation de ces serveurs, on utilise le script suivant : 
 
 ```PowerShell
