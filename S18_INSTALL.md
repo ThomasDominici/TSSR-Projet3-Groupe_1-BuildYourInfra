@@ -38,7 +38,40 @@ Voila, votre Purple Knight est désormais installé et, vous avez le premier aud
 
 # BloodHound
 
-1. Pré-requis
+## Pré-requis
+
 1 Domain Active Directory
 Windows 10 Entreprise Edition
-Vous allez devoir installer BloodHound sur une machine cliente de votre domaine, connecter avec un compte utilisateur de ce domaine.
+
+## Installer Java
+
+Sur ce lien : https://www.oracle.com/java/technologies/javase-jdk11-downloads.html 
+
+## Installer Neo4j
+
+Sur ce lien : https://neo4j.com/download-center/#community
+Prendre la version community en 4.4.
+Extraire les fihiers, se placer en cmd dans le dossier bin du  dossier et lancer la commande suivante  : 
+```
+neo4j.bat install-service
+```
+Puis on lance la commande  : 
+```
+net start neo4j
+```
+
+Aller sur le navigateur web et aller sur **http://localhost:7474/** pour changer le mot de passe.
+
+## Installation de Bloodhound : 
+
+Sur ce lien : https://github.com/BloodHoundAD/BloodHound/releases  
+Extraire les fichiers et lancer BloodHound.exe
+
+Télécharger SharpHound.ps1 (sur ce lien : https://github.com/BloodHoundAD/BloodHound/tree/master/Collectors)
+Le lancer en powershell avec Edit puis rentrer la ligne de commande suivante : 
+```
+Invoke-Bloodhound -CollectionMethod All -Domain Ekoloclast.lan -ZipFileName Collect.zip
+```
+
+Une fois fait, aller sur l'interface BloodHound et cliquer sur **upload data** et sélectionner le fichier **collecte.zip**. 
+Après téléchargement, Bloodhound affiche la carte du réseau. On peut modifier la carte dans les menus à gauche.
