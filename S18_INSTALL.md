@@ -14,7 +14,7 @@ Une fois le téléchargement terminée, extraire l'archive, et lancer "**PingCas
 
 Voila, votre PingCastle est désormais installé et, vous avez le premier audit de votre domaine.
 
-## Purple Knight
+# Purple Knight
 
 ## 1. Pré-requis
 
