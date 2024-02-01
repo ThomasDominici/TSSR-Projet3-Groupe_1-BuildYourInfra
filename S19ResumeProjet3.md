@@ -24,7 +24,7 @@
 
 | Nom de la Machine | Logiciel ou App | Statut Install | Statut UserGuide |
 | ---- | ---- | ---- | ---- |
-| G1-PARIS-ServerAD | Active Directory<br>DNS<br><br>DHCP<br><br>Windows Server Backup<br>Ping Castle<br>Purple Knight<br>BloodHound | A jour<br>Inexistant (non nécessaire)<br><br>Inexistant (non nécessaire)<br><br>A jour<br><br>A jour<br>A jour<br>A jour | A jour<br>Inexistant (non nécessaire)<br>Inexistant (non nécessaire)<br>A jour<br><br>A jour<br>A jour<br>A jour |
+| G1-PARIS-ServerAD | Active Directory<br>DNS<br>DHCP<br>WSB<br>Ping Castle<br>Purple Knight<br>BloodHound | A jour<br>Inexistant (non nécessaire)<br>Inexistant (non nécessaire)<br>A jour<br>A jour<br>A jour<br>A jour | A jour<br>Inexistant (non nécessaire)<br>Inexistant (non nécessaire)<br>A jour<br>A jour<br>A jour<br>A jour |
 | G1-PARIS-ServerADCore1 | Active Directory + Role FSMO | A jour | A jour<br> |
 | G1-PARIS-ServerADCore2 | Active Directory + Role FSMO | A jour | A jour<br> |
 | G1-PARIS-CLIWIN2 | RAS | RAS | RAS |
