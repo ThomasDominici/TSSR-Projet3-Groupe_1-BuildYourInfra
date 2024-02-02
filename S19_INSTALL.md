@@ -15,3 +15,10 @@ Nous allons soit supprimer, soit côter, les règles du fichier ".conf" de Snort
 En profiter pour vérifier que notre réseau est bien sélectionné, toujours en fonction des besoins 
 ![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/screenshot/snort_2.png)
 
+### SocialPhish
+
+Pour l'installation de SocialPhish sur votre VM Kali, il suffit juste de faire un git clone.
+```Shell
+git clone https://github.com/pvanfas/socialphish.git
+```
+Une fois le répertoire récupérer, nous allons voir comment utiliser SocialPhish dans l'UserGuide.
