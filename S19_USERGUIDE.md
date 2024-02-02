@@ -63,4 +63,52 @@ hydra -l wilder -P /usr/share/wordlists/rockyou.txt 192.169.10.91 ssh
 
 Hydra nous affiche le résultat après l'attaque.  
 
+# Snort
 
+Pour les besoins de notre projets nous avons établie les règles suivantes :
+
+```
+alert icmp any any -> any any (msg: "ICMP Detected"; sid: 1000001; rev:1) 
+
+alert tcp $HOME_NET [!22,!80] -> any [!22,!80] (msg:"Scan Port"; sid:1000003;) 
+
+alert tcp any any -> $HOME_NET 80 (flags: S; msg:"DDOS OSKOOR"; flow: stateless; threshold: type both, track by_dst, count 70, seconds 10; sid:1000004;) 
+
+alert tcp any any -> $HOME_NET 22 (flags: S+; threshold: type both, track by_src, count 5, seconds 60;msg:"SSH Brute Force Attack"; sid:1000007;)
+```
+
+La première règle nous alerte  en cas de ping sur le réseaux.
+
+La deuxième règle nous alerte si un scan de port est lancé sur tous les ports exceptés les ports 22 et 80, pour ne pas que cette règle n'apparaisse pas pendant les deux tests suivants.
+
+La troisième nous alerte en cas de tentative de DDOS sur le port 80, si il a plus de 70 requête en moins de 10 secondes.
+
+Enfin, la dernière règle nous préviens en cas de tentative d'attaque sur le service SSH de nos machines, si il y a plus de 5 requête en 60 secondes
+
+# Socialphish
+
+Une fois le répertoire GitHub sur votre Kali effectuer les commande suivante : 
+```Shell
+Cd socialphish
+chmod 755 socialphish.sh
+./socialphish.sh
+```
+
+Une fois le script lancé, vous verrez ce menu apparaître :
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GHSocialPhish/Capture%20d'%C3%A9cran%202024-02-02%20112349.png?raw=true)
+
+Sélectionnez la page que vous voulez clonez, nous choisirons Netflix : 08. 
+Ensuite le port de votre faux site, nous laisserons le port par défaut : 8080
+
+Le script initialise le serveur pour votre fausse page et vous donne un lien, si vous le diffusez à votre victime, celle ci verra la page ci-dessous apparaitre.
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GHSocialPhish/Capture%20d'%C3%A9cran%202024-02-02%20112609.png?raw=true)
+
+Quand celle ci cliquera sur le bouton "Sign In", la victime sera redirigé vers la vrai page de netflix.
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GHSocialPhish/Capture%20d'%C3%A9cran%202024-02-02%20112625.png?raw=true)
+
+Et nous récupérerons sur notre script ses identifiants de connexion sauvegardé dans un fichier texte.
+
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/GHSocialPhish/Capture%20d'%C3%A9cran%202024-02-02%20112402.png?raw=true)
