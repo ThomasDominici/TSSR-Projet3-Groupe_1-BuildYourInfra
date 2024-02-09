@@ -1,5 +1,5 @@
 # 1. Schéma de l'Infra
-![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/BilanEkoloclastV2.png?raw=true)
+![img](https://github.com/ThomasDominici/TSSR-Projet3-Groupe_1-BuildYourInfra/blob/Ressources_Images/BilanEkoloclastV5.drawio.png?raw=true)
 # 2. Tableau de Synthèse Matériels
 | Nom des Machines | Type | OS | Fonction | Adresse IP + Masque | Nombre de Disques + Espace libre par disque | RAM |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
